@@ -22,19 +22,16 @@ public class Homepage extends base {
 		driver=initializedriver();
 	}
 	@Test(dataProvider="getdata")
-	public void basepagenav(String uname,String pwd) throws IOException
+	public void basepagenav() throws IOException
 	{
 	 
 	
-driver.get("https://www.saucedemo.com/");
+driver.get("https://demoqa.com/elements");
 driver.manage().window().maximize();
 
 loginpage l=new loginpage(driver);
 
-Assert.assertEquals(l.gettitle().getText(), "Accepted usernames are:");
-l.username().sendKeys(uname);
-l.password().sendKeys(pwd);
-l.login().click();
+
 	}
 	
 	@AfterTest

@@ -4,7 +4,8 @@
   <test thread-count="5" name="Test">
     <classes>
       <class name="Academy.E2Eworkflow.AppTest"/>
-      <class name="Academy.E2Eworkflow.Homepage"/>
+      
+      <class name="Academy.E2Eworkflow.ElementsPage"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

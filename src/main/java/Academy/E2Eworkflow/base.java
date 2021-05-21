@@ -19,7 +19,7 @@ public class base {
 	public WebDriver initializedriver() throws IOException
 	{
 		Properties prop=new Properties();
-		FileInputStream fis=new FileInputStream("D:\\javap\\E2Eworkflow\\src\\main\\java\\resources\\data.properties");
+		FileInputStream fis=new FileInputStream("C:\\Users\\hp\\E2Eworkflow\\src\\main\\java\\resources\\data.properties");
 		prop.load(fis);
 		String browsername=prop.getProperty("browser");
 		

@@ -3,11 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Academy.E2Eworkflow.Homepage">
+      <class name="Academy.E2Eworkflow.ElementsPage">
         <methods>
-          <include name="basepagenav" invocation-numbers="0 1"/>
+          <include name="elementspage1"/>
+          <include name="initialize"/>
         </methods>
-      </class> <!-- Academy.E2Eworkflow.Homepage -->
+      </class> <!-- Academy.E2Eworkflow.ElementsPage -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

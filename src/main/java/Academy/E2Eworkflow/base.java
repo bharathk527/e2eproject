@@ -1,18 +1,25 @@
 package Academy.E2Eworkflow;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
+
+
 public class base {
+	
 	
 	public WebDriver driver;
 
@@ -49,5 +56,15 @@ public class base {
 		
 		
 	}
+	public void getscreenshot(String testCaseName,WebDriver driver) throws IOException
+	{
+		TakesScreenshot ts=(TakesScreenshot) driver;
+		File source=ts.getScreenshotAs(OutputType.FILE);
+		String destinationfile = System.getProperty("user.dir")+"\\reports\\"+testCaseName+".png";
+		FileUtils.copyFile(source,new File(destinationfile));
+		
+		
+	}
+	
 }
 	
